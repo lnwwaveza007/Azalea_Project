@@ -16,10 +16,10 @@ const orderCompleteDelivery = () => {
                 </defs>
             </svg>
         </div>
-        <div className="text-black text-center font-roboto text-lg font-medium leading-[18px] my-[2rem]">
+        <div className="text-black text-center font-roboto text-lg font-bold leading-[18px] my-[2rem]">
             Order Success
         </div>
-        <div className="text-black text-center font-roboto text-base font-light leading-[18px] mb-[15rem]">
+        <div className="text-black text-center font-roboto text-base font-light leading-[18px] mb-[14rem]">
             Your order will be sent to your address <br />
             Thank you for choosing us
         </div>
