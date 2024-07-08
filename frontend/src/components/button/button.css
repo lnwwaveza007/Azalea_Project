@@ -1,0 +1,42 @@
+.dark-button {
+    background-color: #63CB95;
+    padding: 20px;
+    border-radius: 24px;
+    width: 268px;
+    height: 33px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-h1 {
+    font-size: 12px;
+    font-weight: regular;
+    color: #FFFFFF;
+}
+
+.transprentButton{
+    background-color: #ffffff;
+    border: 1px solid #63CB95;
+    padding: 20px;
+    border-radius: 24px;
+    width: 268px;
+    height: 33px;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tran-h1 {
+    font-size: 12px; 
+    font-weight: regular;
+    color: #63CB95;
+}
+
+.tran-span {
+    font-family: Roboto;  
+    display: flex;
+}
