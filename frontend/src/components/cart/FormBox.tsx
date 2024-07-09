@@ -15,7 +15,7 @@ function FormBox(props: FormBoxProp) {
                         <input
                             type="text"
                             placeholder={props.textBox}
-                            className="border border-black w-[320px] h-[60px] opacity-50 rounded-[10px] bg-white text-[#1E1E1E] "
+                            className="p-5 border border-black w-[320px] h-[60px] opacity-50 rounded-[10px] bg-white text-[#1E1E1E] "
                         />
                     </div>
 
