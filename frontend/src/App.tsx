@@ -9,6 +9,7 @@ import OrderCompleteDelivery from "./pages/orderCompleteDelivery";
 import OrderCompletePickUp from "./pages/orderCompletePickUp";
 import PickUpDetails from "./pages/pickUpDetails";
 import ShippingDetails from "./pages/shippingDetails";
+import Transaction from "./pages/transaction";
 
 import Checkbutton from "./components/checkButton";
 import InfoRegis from "./components/checkblockInfo";
@@ -41,6 +42,7 @@ function App() {
         <Route path="/orderCompletePickUp" element={<OrderCompletePickUp />} />
         <Route path="/pickUpDetails" element={<PickUpDetails/>} />
         <Route path="/shippingDetails" element={<ShippingDetails/>} />
+        <Route path="/transaction" element={<Transaction/>} />
         <Route path="/darkbutton" element={<Checkbutton />} />
         <Route path="/BlockTypeInfo" element={<InfoRegis />} />
         <Route path="/checkProfile" element={<BlockSettingProfile />} />

@@ -7,7 +7,7 @@ function MiniFormBox(props: MiniFormBoxProp) {
     return (
         <>
 
-            <div className="flex justify-center px-[19px] pb-[21px]">
+            <div className="flex justify-center px-[10px] pb-[21px]">
                     <div className="flex flex-col">
                         <label className="text-[14px] text-[#1E1E1E]">
                             {props.text}
@@ -15,7 +15,7 @@ function MiniFormBox(props: MiniFormBoxProp) {
                         <input
                             type="text"
                             placeholder={props.textBox}
-                            className="border border-black w-[320px] h-[60px] opacity-50 rounded-[10px] bg-white text-[#1E1E1E] "
+                            className="p-5 border border-black w-[150px] h-[60px] opacity-50 rounded-[10px] bg-white text-[#1E1E1E] "
                         />
                     </div>
 

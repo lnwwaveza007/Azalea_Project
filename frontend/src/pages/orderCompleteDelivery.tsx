@@ -3,7 +3,7 @@ import GreenBox from "../components/cart/greenBox";
 
 const orderCompleteDelivery = () => {
     return <>
-        <PaymentBar />
+        <PaymentBar text="Payment"/>
         <div className="flex flex-col items-center mt-[10rem]">
             <svg xmlns="http://www.w3.org/2000/svg" width="172" height="172" viewBox="0 0 172 172" fill="none">
                 <g clip-path="url(#clip0_34_3680)">

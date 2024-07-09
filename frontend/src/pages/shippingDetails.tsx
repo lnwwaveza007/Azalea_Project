@@ -6,15 +6,15 @@ import PleaseText from "../components/cart/PleaseText";
 
 const shippingDetails = () => {
     return <>
-        <PaymentBar/>
+        <PaymentBar text="Payment"/>
         <PayStep isActive={true}/>
         <PleaseText text="Please Enter Your Shipping Details"/>
         <div className="flex flex-col gap-3">
-        <FormBox text="Firstname" textBox="      Enter your firstname"/>
-        <FormBox text="Lastname" textBox="      Enter your lastname"/>
-        <FormBox text="Phone Number" textBox="      Enter your phone number"/>
-        <FormBox text="Address" textBox="      Enter your address"/>
-        <FormBox text="ZIP/Postal code" textBox="      Enter your ZIP/Postal code"/>
+        <FormBox text="Firstname" textBox="Enter your firstname"/>
+        <FormBox text="Lastname" textBox="Enter your lastname"/>
+        <FormBox text="Phone Number" textBox="Enter your phone number"/>
+        <FormBox text="Address" textBox="Enter your address"/>
+        <FormBox text="ZIP/Postal code" textBox="Enter your ZIP/Postal code"/>
         <GreenBox text="Confirm Address"/>
         </div>
     </>
