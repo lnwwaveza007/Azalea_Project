@@ -6,7 +6,7 @@ import PleaseText from "../components/cart/PleaseText";
 
 const Choose = () => {
     return <>
-        <div className="flex flex-col items-center justify-center bg-white h-screen">
+        <div className="flex flex-col">
             <PaymentBar/>
             <PayStep isActive={true} />
             <PleaseText text="Please Select Your Receiving Method"/>
