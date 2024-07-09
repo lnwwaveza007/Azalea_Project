@@ -12,15 +12,22 @@ import Blog from "./pages/blog";
 import Workshop from "./pages/workshop";
 import BlogDescription from "./pages/blogdescription";
 import WorkshopDescription from "./pages/workshopdescription";
+import ShippingDetails from "./pages/shippingDetails";
+import Transaction from "./pages/transaction";
 
 import Checkbutton from "./components/checkButton";
 import InfoRegis from "./components/checkblockInfo";
 import BlockSettingProfile from "./components/checkProfile"; 
 
+import StatusCart from "./components/button/status";
 
 import Login from "./pages/login";
 import Register from "./pages/register";
 import ProfileNormal from "./pages/profileNormal";
+import ProfileNormalUpgrade from "./pages/profileNormalUpgrade";
+import ProfilePremium from "./pages/profilePremium";
+import ProfilePremiumDowngrade from "./pages/profilePremiumDowngrade";
+
 
 
 import './components/button/button.css';
@@ -39,6 +46,8 @@ function App() {
         <Route path="/orderCompleteDelivery" element={<OrderCompleteDelivery />} />
         <Route path="/orderCompletePickUp" element={<OrderCompletePickUp />} />
         <Route path="/pickUpDetails" element={<PickUpDetails/>} />
+        <Route path="/shippingDetails" element={<ShippingDetails/>} />
+        <Route path="/transaction" element={<Transaction/>} />
         <Route path="/darkbutton" element={<Checkbutton />} />
         <Route path="/BlockTypeInfo" element={<InfoRegis />} />
         <Route path="/checkProfile" element={<BlockSettingProfile />} />
@@ -48,6 +57,12 @@ function App() {
         <Route path="/profileNormal" element={<ProfileNormal />} />
         <Route path="/workshop" element={<Workshop />} /> 
         <Route path="/workshopdescription" element={<WorkshopDescription />} />
+        <Route path="/profileNormalUpgrade" element={<ProfileNormalUpgrade />} />
+        <Route path="/profilePremium" element={<ProfilePremium />} />
+        <Route path="/profilePremiumDowngrade" element={<ProfilePremiumDowngrade />} />
+        
+        <Route path="/status" element={<StatusCart/>} />
+
       </Routes>
     </BrowserRouter>
   )

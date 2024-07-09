@@ -6,8 +6,8 @@ import PleaseText from "../components/cart/PleaseText";
 
 const Choose = () => {
     return <>
-        <div className="flex flex-col items-center justify-center bg-white h-screen">
-            <PaymentBar/>
+        <div className="flex flex-col">
+            <PaymentBar text="Payment"/>
             <PayStep isActive={true} />
             <PleaseText text="Please Select Your Receiving Method"/>
             <GreenBox text="Pick Up"/>
