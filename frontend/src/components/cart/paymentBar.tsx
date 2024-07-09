@@ -10,6 +10,7 @@ function PaymentBar(props: PaymentBarProp) {
     return (
         <div className="h-[54px] flex items-center justify-between px-4 relative">
             
+            
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 15 30"

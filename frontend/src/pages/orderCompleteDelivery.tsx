@@ -1,6 +1,6 @@
 import PaymentBar from "../components/cart/paymentBar";
 import GreenBox from "../components/cart/greenBox";
-
+import { Link } from "react-router-dom";
 const orderCompleteDelivery = () => {
     return <>
         <PaymentBar text="Payment"/>
@@ -23,8 +23,12 @@ const orderCompleteDelivery = () => {
             Your order will be sent to your address <br />
             Thank you for choosing us
         </div>
-
-        <GreenBox text="Back to Home"/>
+        <Link
+                to="/pickUpDetails"
+            >
+                
+                <GreenBox text="Back to Home"/>
+            </Link>
 
 
     </>

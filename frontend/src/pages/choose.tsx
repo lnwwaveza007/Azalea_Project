@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import GreenBox from "../components/cart/greenBox";
 import PurpleBox from "../components/cart/PurpleBox";
 import PaymentBar from "../components/cart/paymentBar";
@@ -10,8 +12,17 @@ const Choose = () => {
             <PaymentBar text="Payment"/>
             <PayStep isActive={true} />
             <PleaseText text="Please Select Your Receiving Method"/>
-            <GreenBox text="Pick Up"/>
-            <PurpleBox text="Delivery"/>
+            <Link
+                to="/pickUpDetails"
+            >
+                <GreenBox text="Pick Up"/>
+            </Link>
+
+            <Link
+                to="/shippingDetails"
+            >
+                <PurpleBox text="Delivery"/>
+            </Link>
         </div>
 
     </>
