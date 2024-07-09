@@ -2,7 +2,6 @@ import Card from "../components/homepage/card";
 import Navbar from "../components/navbar/navbar";
 import PageBar from "../components/navbar/pagebar";
 import Plant from "../components/homepage/plant";
-import plants from "../assets/product/plant";
 import { useEffect, useState } from "react";
 
 const Homepage = () => {
@@ -15,6 +14,7 @@ const Homepage = () => {
     }, []);
 
     const productList = plants.map((Product) => (<Plant 
+        id={Product.id}
         name={Product.name}
         img={Product.img}
         price={Product.price}

@@ -1,11 +1,11 @@
-import GreenButton from "../components/login/greenButton";
+import { useLocation } from 'react-router-dom';
 
 const Description = () => {
+    const q = useLocation().state?.id;
+
     return <>
-        <h1>Description</h1>
-        <h2>Welcome to Description</h2>
-        <GreenButton text="Yes"/>
-        <GreenButton text="No"/>
+        <h1 className='text-black'>Hey description Here!!</h1>
+        <h2 className='text-black'>{q}</h2>
     </>;
 };
 
