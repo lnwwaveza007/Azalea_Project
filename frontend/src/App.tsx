@@ -14,10 +14,15 @@ import Checkbutton from "./components/checkButton";
 import InfoRegis from "./components/checkblockInfo";
 import BlockSettingProfile from "./components/checkProfile"; 
 
+import StatusCart from "./components/button/status";
 
 import Login from "./pages/login";
 import Register from "./pages/register";
 import ProfileNormal from "./pages/profileNormal";
+import ProfileNormalUpgrade from "./pages/profileNormalUpgrade";
+import ProfilePremium from "./pages/profilePremium";
+import ProfilePremiumDowngrade from "./pages/profilePremiumDowngrade";
+
 
 
 import './components/button/button.css';
@@ -44,6 +49,11 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/profileNormal" element={<ProfileNormal />} />
+        <Route path="/profileNormalUpgrade" element={<ProfileNormalUpgrade />} />
+        <Route path="/profilePremium" element={<ProfilePremium />} />
+        <Route path="/profilePremiumDowngrade" element={<ProfilePremiumDowngrade />} />
+        
+        <Route path="/status" element={<StatusCart/>} />
 
       
       </Routes>
