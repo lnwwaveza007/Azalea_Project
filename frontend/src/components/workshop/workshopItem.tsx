@@ -20,7 +20,7 @@ function WorkshopItem(props: workshopProps) {
         <>
             <Link
                 to={{
-                    pathname: "/description",
+                    pathname: "/workshopdescription",
                 }}
                 state={{ id: sendId }}
                 className="w-full"
@@ -34,11 +34,11 @@ function WorkshopItem(props: workshopProps) {
 
                     </div>
                     <div className="mt-2">
-                        <h1 className="text-[#252525] font-semibold text-[16px]">{props.title}</h1>
+                        <h1 className="uppercase text-[#252525] font-semibold text-[16px]">{props.title}</h1>
                         <div className="flex flex-row items-center gap-2">
                             <p className="text-[#BF9670] text-[12px]">{props.author}</p>
                             <p className="text-[#252525] text-bold">-</p>
-                            <p className="text-[#B5B5B5] text-[12px]">{props.date}</p>
+                            <p className="text-[#B5B5B5] text-[12px]">{props.date.substring(0,10)}</p>
                         </div>
                         <p className="text-[#B5B5B5] font-normal text-[12px]">{desc}</p>
                     </div>

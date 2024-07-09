@@ -10,6 +10,8 @@ import OrderCompletePickUp from "./pages/orderCompletePickUp";
 import PickUpDetails from "./pages/pickUpDetails";
 import Blog from "./pages/blog";
 import Workshop from "./pages/workshop";
+import BlogDescription from "./pages/blogdescription";
+import WorkshopDescription from "./pages/workshopdescription";
 
 import Checkbutton from "./components/checkButton";
 import InfoRegis from "./components/checkblockInfo";
@@ -30,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/description" element={<Description />} />
+        <Route path="/blogdescription" element={<BlogDescription />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/choose" element={<Choose />} />
         <Route path="/homepage" element={<Homepage />} />
@@ -44,6 +47,7 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/profileNormal" element={<ProfileNormal />} />
         <Route path="/workshop" element={<Workshop />} /> 
+        <Route path="/workshopdescription" element={<WorkshopDescription />} />
       </Routes>
     </BrowserRouter>
   )
