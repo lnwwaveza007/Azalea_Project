@@ -2,6 +2,7 @@ import CartItem from "../components/cart/cartItem";
 import PaymentBar from "../components/cart/paymentBar";
 import PurpleBox from "../components/cart/PurpleBox";
 
+
 const Cart = () => {
     return <>
     <div className="bg-[#ECFFF5]">

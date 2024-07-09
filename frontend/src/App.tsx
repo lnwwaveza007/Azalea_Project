@@ -19,7 +19,6 @@ import Checkbutton from "./components/checkButton";
 import InfoRegis from "./components/checkblockInfo";
 import BlockSettingProfile from "./components/checkProfile"; 
 
-import StatusCart from "./components/button/status";
 
 import Login from "./pages/login";
 import Register from "./pages/register";
@@ -61,7 +60,6 @@ function App() {
         <Route path="/profilePremium" element={<ProfilePremium />} />
         <Route path="/profilePremiumDowngrade" element={<ProfilePremiumDowngrade />} />
         
-        <Route path="/status" element={<StatusCart/>} />
 
       </Routes>
     </BrowserRouter>

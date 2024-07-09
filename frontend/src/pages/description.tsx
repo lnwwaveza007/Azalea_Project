@@ -15,6 +15,10 @@ const Description = () => {
     const [description, setDescription] = useState('');
     const [type, setType] = useState('');
     const [img, setImg] = useState('');
+    const [love, setLove] = useState(0);
+    const [health, setHealth] = useState(0);
+    const [work, setWork] = useState(0);
+    const [money, setMoney] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,6 +44,10 @@ const Description = () => {
             setDescription(tempData[0].description);
             setType(tempData[0].type);
             setImg(tempData[0].img);
+            setLove(tempData[0].love);
+            setHealth(tempData[0].health);
+            setWork(tempData[0].work);
+            setMoney(tempData[0].money);
         };
 
         fetchData();
@@ -67,8 +75,11 @@ const Description = () => {
             <div className='mt-2 text-[#505050]'>
                 <p>{description}</p>
             </div>
-            <div className='mt-4'>
-                <Card type="love" content={<><p>Hello World</p></>} />
+            <div className='mt-4 flex flex-col gap-4'>
+                <Card type="love" content={<><p className='text-[#252525]'>Power up your love at level {love}</p></>} />
+                <Card type="money" content={<><p className='text-[#252525]'>Power up your money at level {money}</p></>} />
+                <Card type="work" content={<><p className='text-[#252525]'>Power up your work at level {work}</p></>} />
+                <Card type="health" content={<><p className='text-[#252525]'>Power up your health at level {health}</p></>} />
             </div>
             <div className='mt-7 flex flex-col gap-2'>
                 <div className='p-3 bg-[#63CB95] rounded-md w-full flex justify-center'>
