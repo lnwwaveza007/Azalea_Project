@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 const Homepage = () => {
     const [plants, setPlants] = useState([]);
 
+    console.log(localStorage.getItem('email'));
+
     useEffect(() => {
         fetch('http://10.4.53.25:4012/products')
         .then(res => res.json())
@@ -24,7 +26,7 @@ const Homepage = () => {
         <Navbar />
         <PageBar selected={1} />
         <div className="mt-5 mx-4">
-            <Card type="Love" content={<>
+            <Card type="love" content={<>
                 <p className="text-black">Get <b>15%</b> off</p>
                 <p className="uppercase text-[#252525]">If you buy <span className=" text-pink-500">Lovers plants</span></p>
                 </>} />

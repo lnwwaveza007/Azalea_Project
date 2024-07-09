@@ -1,14 +1,37 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface CardItemProps {
+  id: number;
   imgSrc: string;
   title: string;
   price: string;
+  method: any;
 }
 
 
 function CartItem(props: CardItemProps) {
   const [count, setCount] = useState(1);
+
+  const handleCartRemove = () => {
+        const fetchData = async () => {
+            const requestBody = {
+                id: props.id,
+            };
+
+            const response = await fetch('http://10.4.53.25:4012/cartRemove', {
+                method: 'POST', // or 'PUT' if you're updating data
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
+        };
+
+        fetchData();
+        props.method();
+       
+    }
 
   const increment = () => {
     setCount(count + 1);
@@ -17,11 +40,13 @@ function CartItem(props: CardItemProps) {
   const decrement = () => {
     if (count > 1) {
       setCount(count - 1);
+    }else {
+      handleCartRemove();
     }
   };
 
   return <>
-    <div className="p-5">
+    <div className="px-5 py-2">
       <div className="py-2 px-5 bg-white flex items-center p-2 rounded-[20px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
         <div className="border border-black rounded">
           <img src={props.imgSrc} className="w-20 h-20 rounded-md" />

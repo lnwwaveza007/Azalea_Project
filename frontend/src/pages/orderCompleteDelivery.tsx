@@ -24,7 +24,7 @@ const orderCompleteDelivery = () => {
             Thank you for choosing us
         </div>
         <Link
-                to="/pickUpDetails"
+                to="/homepage"
             >
                 
                 <GreenBox text="Back to Home"/>

@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 
+interface InfoRegisProps {
+    text: string;
+    method: any;
+}
 
-const InfoRegis = ({text} : {text:string})  => {
+const InfoRegis = (props: InfoRegisProps)  => {
+    const { text, method } = props;
     const [image, setImage] = useState('');
 
 
@@ -36,9 +41,9 @@ const InfoRegis = ({text} : {text:string})  => {
                         {/* มันควรจะใส่รูปมาจากตรงอื่นได้ แต่ยังคิดไม่ออก */}
                         <img src={image} alt="image" style={{ width: '14px', height: '14px' }}/>
 
-                        <input type="text" placeholder = {`Enter your ${text}`}
+                        <input onChange={(e) => method(e.target.value)} type="text" placeholder = {`Enter your ${text}`}
                                 style={{ backgroundColor: '#FFFFFF'
-                                        , color: '#e5e5e5'
+                                        , color: '#252525'
                                         , fontFamily : 'roboto'
                                         , fontSize: '12px'
                                         , padding: '20px'

@@ -2,9 +2,11 @@ import { useLocation } from 'react-router-dom';
 import Navbar from '../components/navbar/navbar';
 import Card from '../components/homepage/card';
 
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Description = () => {
+    const negative = useNavigate();
     const id = useLocation().state?.id;
 
     const [data, setData] = useState([]);
@@ -19,6 +21,28 @@ const Description = () => {
     const [health, setHealth] = useState(0);
     const [work, setWork] = useState(0);
     const [money, setMoney] = useState(0);
+
+    const handleCartAdd = () => {
+        const fetchData = async () => {
+            const requestBody = {
+                id: id,
+                email: localStorage.getItem('email')
+            };
+
+            const response = await fetch('http://10.4.53.25:4012/cartAdd', {
+                method: 'POST', // or 'PUT' if you're updating data
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
+            
+            await negative('/cart');
+        };
+
+        fetchData();
+       
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -52,7 +76,7 @@ const Description = () => {
 
         fetchData();
     }, []);
- 
+    
 
     return <>
         <Navbar type={1} />
@@ -85,7 +109,7 @@ const Description = () => {
                 <div className='p-3 bg-[#63CB95] rounded-md w-full flex justify-center'>
                     <p className='font-[24px] text-[#FFF]'>Buy Now</p>
                 </div>
-                <div className='p-3 bg-[#8E44AD] rounded-md w-full flex justify-center'>
+                <div className='p-3 bg-[#8E44AD] rounded-md w-full flex justify-center' onClick={handleCartAdd}>
                     <p className='font-[24px] text-[#FFF]'>Add to Cart</p>
                 </div>
             </div>
