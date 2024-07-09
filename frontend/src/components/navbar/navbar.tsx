@@ -1,9 +1,15 @@
 import cart from "/public/navbar/mdi_cart-outline.png";
 import tree from "/public/navbar/tree.png"
 
-const Navbar = () => {
+interface NavbarProps {
+    type?: number;
+
+}
+
+const Navbar = (props: NavbarProps) => {
     return <>
-        <div className="flex flex-row justify-between items-center bg-white p-3">
+
+        {props.type != 1 && <div className="flex flex-row justify-between items-center bg-white p-3">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#8E44AD" class="bi bi-person-circle" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -20,7 +26,23 @@ const Navbar = () => {
                 </svg>
             </div>
 
-        </div>
+        </div>}
+
+        {props.type == 1 && <div className="flex flex-row justify-between items-center bg-white p-3">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="30" viewBox="0 0 15 30" fill="none">
+                    <path d="M11.935 21.775L10.6088 23.1L3.38502 15.8788C3.26857 15.7631 3.17616 15.6255 3.1131 15.4739C3.05004 15.3223 3.01758 15.1598 3.01758 14.9956C3.01758 14.8315 3.05004 14.6689 3.1131 14.5174C3.17616 14.3658 3.26857 14.2282 3.38502 14.1125L10.6088 6.88751L11.9338 8.21251L5.15377 14.9938L11.935 21.775Z" fill="black" />
+                </svg>
+            </div>
+            <div className="flex flex-row justify-center items-center">
+                <img src={tree} alt="tree" />
+                <a className=" font-semibold text-[28px] text-[#8E44AD]">Azalea</a>
+            </div>
+            <div>
+
+            </div>
+        </div>}
+
     </>;
 };
 

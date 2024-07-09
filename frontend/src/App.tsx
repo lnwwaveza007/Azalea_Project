@@ -8,6 +8,8 @@ import Homepage from "./pages/homepage";
 import OrderCompleteDelivery from "./pages/orderCompleteDelivery";
 import OrderCompletePickUp from "./pages/orderCompletePickUp";
 import PickUpDetails from "./pages/pickUpDetails";
+import Blog from "./pages/blog";
+import Workshop from "./pages/workshop";
 
 import Checkbutton from "./components/checkButton";
 import InfoRegis from "./components/checkblockInfo";
@@ -37,13 +39,11 @@ function App() {
         <Route path="/darkbutton" element={<Checkbutton />} />
         <Route path="/BlockTypeInfo" element={<InfoRegis />} />
         <Route path="/checkProfile" element={<BlockSettingProfile />} />
-        
-        
+        <Route path="/blog" element={<Blog />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/profileNormal" element={<ProfileNormal />} />
-
-      
+        <Route path="/workshop" element={<Workshop />} /> 
       </Routes>
     </BrowserRouter>
   )
