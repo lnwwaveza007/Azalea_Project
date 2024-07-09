@@ -3,6 +3,7 @@ import GreenBox from "../components/cart/greenBox";
 import PaymentBar from "../components/cart/paymentBar";
 import PayStep from "../components/cart/PayStep";
 import MiniFormBox from "../components/cart/MiniFormBox";
+import { Link } from "react-router-dom";
 
 const transaction = () => {
     return <>
@@ -23,7 +24,12 @@ const transaction = () => {
             <MiniFormBox text="Security Code" textBox="CVV"/>
         </div>
         <FormBox text="ZIP/Postal code" textBox="Enter your ZIP/Postal code"/>
-        <GreenBox text="Complete Transaction"/>
+        <Link
+                to="/orderCompleteDelivery"
+            >
+            <GreenBox text="Complete Transaction"/>
+
+            </Link>
     </>
 }
 

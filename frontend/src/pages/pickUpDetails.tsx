@@ -4,6 +4,7 @@ import GreenBox from "../components/cart/greenBox";
 import PaymentBar from "../components/cart/paymentBar";
 import PayStep from "../components/cart/PayStep";
 import PleaseText from "../components/cart/PleaseText";
+import { Link } from "react-router-dom";
 
 const pickUpDetails = () => {
     return <>
@@ -18,7 +19,11 @@ const pickUpDetails = () => {
             <MiniFormBox text="Date" textBox="DD/MM"/>
             <MiniFormBox text="Time" textBox="00:00"/>
         </div>
-        <GreenBox text="Confirm Pickup"/>
+        <Link
+                to="/transaction"
+            >
+                <GreenBox text="Confirm Pickup"/>
+            </Link>
         </div>
     </>
 }

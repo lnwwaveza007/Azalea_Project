@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CartItem from "../components/cart/cartItem";
 import PaymentBar from "../components/cart/paymentBar";
 import PurpleBox from "../components/cart/PurpleBox";
@@ -29,7 +30,11 @@ const Cart = () => {
             <h1 className="text-[20px] text-black font-roboto font-medium">Total</h1>
             <h1 className="text-[20px] text-black font-roboto font-light">XXX Baht</h1>
         </div>
-        <PurpleBox text="Order Now"/>
+        <Link
+            to="/choose"
+            >
+             <PurpleBox text="Order Now"/>  
+        </Link>
     </div>
 
     </>;
