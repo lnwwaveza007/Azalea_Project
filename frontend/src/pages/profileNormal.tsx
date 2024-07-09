@@ -3,6 +3,9 @@ import profilePic from '../../public/profile.png';
 import TransaprentButton from '../components/button/transparentButton';
 import SettingProfile from '../components/checkProfile';
 
+import { Link } from "react-router-dom";
+
+
 const ProfileNormal = () => {   
     return (<>
         <div className='w-full h-[19em] flex flex-col justify-center items-center bg-[#63CB95]'>  
@@ -24,21 +27,33 @@ const ProfileNormal = () => {
                 <SettingProfile/>
         </div>
 
-        <div className='m-auto flex flex-col justify-center items-center bg-[#8E44AD] w-[20em] h-[9em] rounded-xl opacity-85 drop-shadow-xl'>
-            <div className='flex '>
-                <p className='pt-[0.5em] pl-[0em] font-bold flex'>Upgrade To Premium</p>
+        <Link
+            to={{
+                pathname: "/profileNormalUpgrade",
+            }}
+            >
+                <div className='m-auto flex flex-col justify-center items-center bg-[#8E44AD] w-[20em] h-[9em] rounded-xl opacity-85 drop-shadow-xl'>
+                <div className='flex '>
+                    <p className='pt-[0.5em] pl-[0em] font-bold flex'>Upgrade To Premium</p>
                 <div className='pt-[0.25em] pl-[3.5em] flex justify-end  text-2xl '>
                     7$
                 </div>
-            </div>
-            
-            <p className='pt-[1em] pl-[1.6em]'>Increase accuracy in selecting plants to match your horoscope.</p>
+                </div>
+                   <p className='pt-[1em] pl-[1.6em]'>Increase accuracy in selecting plants to match your horoscope.</p>
+                 </div>
 
-        </div>
-
-        <div className='flex flex-col justify-center items-center mt-10 font-extrabold'>
-            <TransaprentButton text='Back to home'/>
-        </div>
+        </Link>
+        
+        <Link
+                to={{
+                    pathname: "/homepage",
+                }}
+                >
+                <div className='flex flex-col justify-center items-center mt-10 font-extrabold'>
+                    <TransaprentButton text='Back to home'/>
+                </div>
+            </Link>
+        
 
         </>
     );

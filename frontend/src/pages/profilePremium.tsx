@@ -1,9 +1,5 @@
 import profilePic from '../../public/profile.png';
-// import SettingProfile from "./profile/settingProfile";
-
-
-
-// import TransaprentButton from '../components/button/transparentButton';
+import { Link } from "react-router-dom";
 import BlockSettingProfile from '../components/checkProfile';
 import SettingProfile from '../components/profile/settingProfile';
 
@@ -23,17 +19,32 @@ const ProfilePremium = () => {
             </div>
             
         </div>
+        
+        
 
         <div className='flex flex-col justify-center items-center'>
                 <BlockSettingProfile/>
-                <SettingProfile text="PACKAGE" />
+                <Link
+                to={{
+                    pathname: "/profilePremiumDowngrade",
+                }}
+                >
+                    <SettingProfile text="PACKAGE" />
+                </Link>
+                
         </div>
         
         
-
-        <div className='m-auto bg-[#8E44AD] p-[20px] rounded-[24px] cursor-pointer text-white w-[286px] h-[28px] flex items-center justify-center'> 
+        <Link
+                to={{
+                    pathname: "/homepage",
+                }}
+                >
+                <div className='m-auto bg-[#8E44AD] p-[20px] rounded-[24px] cursor-pointer text-white w-[286px] h-[28px] flex items-center justify-center'> 
                     <p className='font-normal text-[0.8em]'>Back to Home</p>
-        </div>
+                </div>
+        </Link>
+        
 
         </>
     );

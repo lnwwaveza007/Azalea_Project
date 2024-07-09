@@ -4,6 +4,7 @@ import DarkButton from '../components/button/darkButton';
 import '../components/button/button.css';
 import '../components/button/transparentButton'
 import TransaprentButton from '../components/button/transparentButton';
+import { Link } from "react-router-dom";
 
 const Register = () => {
     return (
@@ -28,13 +29,26 @@ const Register = () => {
                 <BlockInfo text='Gender'/>
             </div>
 
-            <div className='mt-[1em]'>
-                <DarkButton text='Sign up'/>    
-            </div>
+            <Link
+                to={{
+                    pathname: "/homepage",
+                }}
+                >
+                <div className='mt-[1em]'>
+                    <DarkButton text='Sign up'/>    
+                </div>
+            </Link>
             
-            <div className='mt-[1em]'>
-                <TransaprentButton text='Cancle'/>
-            </div>
+            <Link
+                to={{
+                    pathname: "/Login",
+                }}
+                >
+                <div className='mt-[1em]'>
+                    <TransaprentButton text='Cancle'/>
+                </div>
+            </Link>
+            
             
             
         </div>

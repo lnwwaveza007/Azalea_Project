@@ -1,5 +1,6 @@
 import BlockInfo from '../components/login/blockInfo';
 import DarkButton from '../components/button/darkButton';
+import { Link } from "react-router-dom";
 
 import '../components/button/button.css';
 import '../components/button/transparentButton'
@@ -26,13 +27,28 @@ const Login = () => {
                 <p className='text-[#505050] text-[0.6em] mt-[-2em] justify-end content-end items-end flex'>Forget password?</p>
             </div>
 
-            <div className='mt-[2em]'>
-                <DarkButton text='Sign in'/>
-            </div>
+            <Link
+                to={{
+                    pathname: "/homepage",
+                }}
+                >
+                <div className='mt-[2em]'>
+                    <DarkButton text='Sign in'/>
+                </div>
+            </Link>
+
+            
             
             <div className='flex text-xs mt-[1em]'>
                 <p className='text-[#B5B5B5]'>Do not have an account? &nbsp; </p>
-                <p className='text-black'>Sign up</p>
+                <Link
+                    to={{
+                        pathname: "/Register",
+                    }}
+                    >
+                    <p className='text-black'>Sign up</p>
+                </Link>
+                
             </div>
 
             

@@ -1,6 +1,6 @@
 import profilePic from '../../public/profile.png';
 import TransaprentButton from '../components/button/transparentButton';
-// import SettingProfile from '../components/checkProfile';
+import { Link } from "react-router-dom";
 
 const ProfileNormalUpgrade = () => {   
     return (<>
@@ -32,18 +32,32 @@ const ProfileNormalUpgrade = () => {
             
             <div className='flex flex-col items-center justify-center mt-[2em]'>
                 <p className='mb-[1em] text-[0.8em] '>CONFIRM UPGRADE TO PREMIUM.</p>
-                <div className=' bg-white p-[20px] rounded-[24px] cursor-pointer text-[#8E44AD] w-[286px] h-[28px] flex items-center justify-center'> 
-                    <p className='font-medium text-[0.8em]'>CONFIRM</p>
-                </div>
+
+                <Link
+                to={{
+                    pathname: "/profilePremium",
+                }}
+                >
+                    <div className=' bg-white p-[20px] rounded-[24px] cursor-pointer text-[#8E44AD] w-[286px] h-[28px] flex items-center justify-center'> 
+                        <p className='font-medium text-[0.8em]'>CONFIRM</p>
+                    </div>
+                </Link>
                 
             </div>
 
             
         </div>
 
-        <div className='flex flex-col justify-center items-center mt-20 font-extrabold'>
-            <TransaprentButton text='Back to home'/>
-        </div>
+        <Link
+                to={{
+                    pathname: "/homepage",
+                }}
+                >
+                 <div className='flex flex-col justify-center items-center mt-20 font-extrabold'>
+                    <TransaprentButton text='Back to home'/>
+                </div>
+        </Link>
+       
 
         </>
     );

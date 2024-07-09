@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-// interface InfoRegisProps {
-//     text : string
-// }
+
 
 const InfoRegis = ({text} : {text:string})  => {
     const [image, setImage] = useState('');
