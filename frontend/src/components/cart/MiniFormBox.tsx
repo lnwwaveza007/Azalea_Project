@@ -1,13 +1,13 @@
-interface FormBoxProp {
+interface MiniFormBoxProp {
     text: string;
     textBox: string;
 }
 
-function FormBox(props: FormBoxProp) {
+function MiniFormBox(props: MiniFormBoxProp) {
     return (
         <>
 
-            <div className="flex items-center justify-center px-[19px] pb-[21px]">
+            <div className="flex justify-center px-[19px] pb-[21px]">
                     <div className="flex flex-col">
                         <label className="text-[14px] text-[#1E1E1E]">
                             {props.text}
@@ -24,4 +24,4 @@ function FormBox(props: FormBoxProp) {
     )
 }
 
-export default FormBox;
+export default MiniFormBox;
